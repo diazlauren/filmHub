@@ -16,8 +16,16 @@ app.use(bodyParser.json());
 app.use("/films", filmsRoutes);
 
 app.get("/", (req, res) => {
-    res.render("index", { title: "Home" });
-  });
+  res.render("index", { title: "Home" });
+});
+
+app.get("/films", (req, res) => {
+  res.render("films", { title: "Films" });
+});
+
+app.get("/mylist", (req, res) => {
+  res.render("mylist", { title: "My List" });
+});
 
 app.listen(3000);
 
